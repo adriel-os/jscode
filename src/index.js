@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:false}))
 
 //setting middleware
 app.use('/static', express.static(__dirname + '/public')); //Serves resources from public folder
-
+console.log(__dirname + '/public')
 app.get('/', (req, res)=> {
     res.send('atualizou')
 })
