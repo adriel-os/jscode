@@ -12,4 +12,5 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.get('/', (req, res)=> {
     res.send('atualizou')
 })
-app.listen(3000)
+
+app.listen(8080)
