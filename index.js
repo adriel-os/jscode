@@ -3,11 +3,13 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
+app.use('/static', express.static('public'));
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
 
 app.get('/', (req, res)=> {
-    res.send('ok')
+    res.send('atualizou')
 })
-app.listen(8080)
+app.listen(3000)
