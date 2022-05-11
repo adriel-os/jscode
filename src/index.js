@@ -10,6 +10,6 @@ app.use(bodyParser.urlencoded({extended:false}))
 
 
 app.get('/', (req, res)=> {
-    res.send('ok')
+    res.send('atualizou')
 })
 app.listen(3000)
