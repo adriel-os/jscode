@@ -34,5 +34,6 @@ function boot(){
         console.log('Painel Inserido!')
         return true
     }
+    console.log('Panel resource not found...')
     //j('#VGL').hide().after().hide()
 }
