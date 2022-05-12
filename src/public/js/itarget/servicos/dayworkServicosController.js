@@ -32,6 +32,7 @@ function boot(){
 
         clearInterval(myInterval)
         console.log('Painel Inserido!')
+        window.scrollTo(0, 0);
         return true
     }
     console.log('Panel resource not found...')
