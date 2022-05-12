@@ -18,21 +18,21 @@ j(document).ready(async  function()
 
 var myInterval = setInterval(boot(), 200);
 function boot(){
-    if(typeof div == 'function')
+    if(typeof div == 'function' && typeof jsonTarefas == 'function')
     {
+        let main = div({class:'newMain'})  
+        let tarefas = jsonTarefas(j('.tipoServico').parent().parent())
+    
+        main.append(viewMenu(), viewDashTarefas(tarefas))
+        
+        
+        j('#box-dialog').before(main)
+        j('.roundcontAll').css({'background-color':'initial'})
+        j('#sobreMenu').hide()
+
         clearInterval(myInterval)
         console.log('Painel Inserido!')
         return true
     }
-    //Dashboard
-    let main = div({class:'newMain'})  
-    let tarefas = jsonTarefas(j('.tipoServico').parent().parent())
-
-    main.append(viewMenu(), viewDashTarefas(tarefas))
-    
-    
-    j('#box-dialog').before(main)
-    j('.roundcontAll').css({'background-color':'initial'})
-    j('#sobreMenu').hide()
     //j('#VGL').hide().after().hide()
 }
