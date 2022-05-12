@@ -60,5 +60,8 @@ j('#empAtvResListaAtividadesDatas #datas ul li').css({'font-size':'18px'})
 j('.panel, .panel-primary').first().remove()
 j("a:contains('Acessar'), a:contains('Priorizar'), a:contains('Anexos')").remove()
 
+j('.empAtvResListaAtividadesConteudo span').removeAttr('style').css({'font-style': 'italic'})
+j('.empAtvResListaAtividadesConteudo table').css({'margin-bottom': '30px'})
+j('.empAtvResListaAtividadesConteudo ul li').css({'margin-top': '15px', 'line-height':'30px'})
 
 j('head').append('<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Titillium+Web&display=swap" rel="stylesheet">')
