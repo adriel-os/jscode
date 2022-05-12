@@ -64,4 +64,7 @@ j('.empAtvResListaAtividadesConteudo span').removeAttr('style').css({'font-style
 j('.empAtvResListaAtividadesConteudo table').css({'margin-bottom': '30px'})
 j('.empAtvResListaAtividadesConteudo ul li').css({'margin-top': '15px', 'line-height':'30px'})
 
+j('.acompanhamento p').removeAttr('style').css({margin:'15px', 'font-size':'18px', 'font-weight':100, 'font-family':'verdana'})
+j('.acompanhamento').removeAttr('style').css({'font-size':'18px', 'font-weight':100, 'font-family':'verdana'})
+
 j('head').append('<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Titillium+Web&display=swap" rel="stylesheet">')
