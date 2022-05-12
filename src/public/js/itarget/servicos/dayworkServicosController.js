@@ -3,18 +3,18 @@
 
 // Ready function
    //Head inject
-   j(document).ready(async  function()
-   {
+j(document).ready(async  function()
+{
 
-    await j('head').append(j('<script>', {src:'https://kit.fontawesome.com/a076d05399.js',crossorigin :'anonymous'}))
+    j('head').append(j('<script>', {src:'https://kit.fontawesome.com/a076d05399.js',crossorigin :'anonymous'}))
     
-    await j('head').append(j('<script>', {src:'http://jscode.com.br/static/js/itarget/servicos/dayworkServicosFunctions.js'}))
-    await j('head').append(j('<script>', {src:'http://jscode.com.br/static/js/itarget/servicos/dayworkServicosView.js'}))
-    await j('head').append(j('<script>', {src:'http://jscode.com.br/static/js/itarget/servicos/dayworkServicosModel.js'}))
+    j('head').append(j('<script>', {src:'http://jscode.com.br/static/js/itarget/servicos/dayworkServicosFunctions.js'}))
+    j('head').append(j('<script>', {src:'http://jscode.com.br/static/js/itarget/servicos/dayworkServicosView.js'}))
+    j('head').append(j('<script>', {src:'http://jscode.com.br/static/js/itarget/servicos/dayworkServicosModel.js'}))
     
-    await j('head').append(j('<link>', {href:'http://jscode.com.br/static/css/itarget/dayWorkServicos.css', rel :'stylesheet'}))
+    j('head').append(j('<link>', {href:'http://jscode.com.br/static/css/itarget/dayWorkServicos.css', rel :'stylesheet'}))
 
-    })
+})
 
 j(document).ready(async  function(){
 
