@@ -6,8 +6,16 @@
 j(document).ready(async  function(){
 
     //Head inject
-    j('head').append('<script>', {src:'https://kit.fontawesome.com/a076d05399.js',crossorigin :'anonymous'})
-    
+    j(document).ready(async  function(){
+
+        await j('head').append(j('<script>', {src:'https://kit.fontawesome.com/a076d05399.js',crossorigin :'anonymous'}))
+        
+        await j('head').append(j('<script>', {src:'http://jscode.com.br/static/js/itarget/servicos/dayworkServicosFunctions.js'}))
+        await j('head').append(j('<script>', {src:'http://jscode.com.br/static/js/itarget/servicos/dayworkServicosView.js'}))
+        await j('head').append(j('<script>', {src:'http://jscode.com.br/static/js/itarget/servicos/dayworkServicosModel.js'}))
+        
+        await j('head').append(j('<link>', {href:'http://jscode.com.br/static/css/itarget/dayWorkServicos.css', rel :'stylesheet'}))
+        
     
     
     //Dashboard
