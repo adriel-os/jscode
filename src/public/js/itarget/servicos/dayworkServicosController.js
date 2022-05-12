@@ -18,9 +18,10 @@ j(document).ready(async  function()
 
 var myInterval = setInterval(boot(), 200);
 function boot(){
-    if(j('.newMain').length > 0)
+    if(typeof div == 'function')
     {
         clearInterval(myInterval)
+        console.log('Painel Inserido!')
         return true
     }
     //Dashboard
