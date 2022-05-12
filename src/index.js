@@ -9,10 +9,14 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
-
+app.all('/*', function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
+  
 //setting middleware
 app.use('/static', express.static(__dirname + '/public')); //Serves resources from public folder
-console.log(__dirname + '/public')
+
 app.get('/', (req, res)=> {
     res.send('atualizou')
 })
