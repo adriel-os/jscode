@@ -34,4 +34,4 @@ function boot(){
     j('.roundcontAll').css({'background-color':'initial'})
     j('#sobreMenu').hide()
     //j('#VGL').hide().after().hide()
-})
+}
