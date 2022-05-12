@@ -16,7 +16,7 @@ j(document).ready(async  function()
 
 })
 
-var myInterval = setInterval(boot(), 200);
+var myInterval = setInterval(boot, 200);
 function boot(){
     if(typeof div == 'function' && typeof jsonTarefas == 'function')
     {
