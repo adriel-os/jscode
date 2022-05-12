@@ -16,9 +16,9 @@ j(document).ready(async  function()
 
 })
 
-myInterval = setInterval(boot, 200);
+var myInterval = setInterval(boot(), 200);
 function boot(){
-    if(typeof j('.newMain') == 'object')
+    if(j('.newMain').length > 0)
     {
         clearInterval(myInterval)
         return true
