@@ -16,8 +16,13 @@ j(document).ready(async  function()
 
 })
 
-j(document).ready(async  function(){
-
+myInterval = setInterval(boot, 200);
+function boot(){
+    if(typeof j('.newMain') == 'object')
+    {
+        clearInterval(myInterval)
+        return true
+    }
     //Dashboard
     let main = div({class:'newMain'})  
     let tarefas = jsonTarefas(j('.tipoServico').parent().parent())
