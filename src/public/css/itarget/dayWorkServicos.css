@@ -1,0 +1,31 @@
+.panel-body
+{
+	font-size: 16px;
+	font-family: helvetica;
+}
+
+.panel-body .autor
+{
+	
+	text-transform: capitalize;
+
+}
+
+.panel-body .autor + b
+{
+	font-weight: 200;
+	display: block;
+}
+
+.panel-body .autor + p, .panel-body  .acompanhamento .autor
+{
+	margin-bottom: 10px;
+}
+
+.panel-body .dataHora
+{
+	font-size: 12px;
+	font-family: Verdana;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
