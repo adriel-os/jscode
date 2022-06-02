@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const routes = require('./routes/index.js');
 
 const app = express()
 
@@ -17,7 +18,7 @@ app.all('/*', function(req, res, next) {
 //setting middleware
 app.use('/static', express.static(__dirname + '/public')); //Serves resources from public folder
 
-app.get('/', (req, res)=> {
-    res.send('atualizou')
-})
+
+app.use('/', routes);
+
 app.listen(8080)

@@ -4,7 +4,7 @@
   "description": "Repositórios em JS",
   "main": "src/index.js",
   "scripts": {
-    "start" : "node src/index.js",
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,10 @@
   "homepage": "https://github.com/aos-uelo/jscode#readme",
   "dependencies": {
     "body-parser": "^1.19.2",
-    "express": "^4.17.3"
+    "dotenv": "^16.0.1",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.20.0"
   }
 }
