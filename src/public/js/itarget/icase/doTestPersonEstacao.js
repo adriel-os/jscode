@@ -25,9 +25,10 @@ function getEstadoCivil()
 let estadoCivil = Math.floor(Math.random() * 8)
     return estadoCivil==0 ?1:estadoCivil  
 }
-
+console.log('fillForm Ready')
 function fillFormEstacao()
 {
+
 //aba 01
 let refIdTeste = Math.floor(Math.random() * 100)
 $("#pessoa-nome").val().trim() == ''? $("#pessoa-nome").val('Usuário teste itarget'+ refIdTeste):''
