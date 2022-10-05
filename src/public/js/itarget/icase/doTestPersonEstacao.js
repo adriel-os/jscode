@@ -20,6 +20,7 @@ function generateDate(minRange=1000, maxRange = 2050)
     }
      return dia+'/'+mes+'/'+ ano
 }
+
 function getEstadoCivil()
 {
 let estadoCivil = Math.floor(Math.random() * 8)
@@ -75,3 +76,17 @@ $('#escolaridade_pessoa-data_fim').val(generateDate(2006, 2015))
 $('#pessoa-num_conselho').val(Math.floor(Math.random() * 1000))
 $('#pessoa-uf_conselho').val('CE')
 }
+
+(function fillBar()
+{
+    $('head').append($('<style>').html(".fillbar !important {height:'40px';padding:'5px';margin-top:15px;border:2px solid silver;display:flex;flex-direction:'row', justify-content:center} .fillLegend{margin-right:35px}"))
+    $('body').append(
+    $('<div>', {'class':'fillbar'}).append(
+        $('<span>', {class:'fillLegend'}).text('Clique para preencher o formulário de cadastro'),
+        $('<input>', {type:'button', value:'Preencher!', class:'fillButton'}).click(function(){
+            fillFormEstacao()
+        })
+    )
+        
+    )
+})()
