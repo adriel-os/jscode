@@ -66,7 +66,11 @@ $('#telefone-fone_0').val('859'+Math.floor(Math.random() * 100000000))
 
 // Formação academica
 $('#escolaridade_pessoa-tipo_graduacao_id').val('1')
-$('#escolaridade_pessoa-faculdade_id').val(Math.floor(Math.random() * 50))
+
+let posInstituicaoEnsino = Math.floor(Math.random() * 30)
+posInstituicaoEnsino = posInstituicaoEnsino == 0 ? 1:posInstituicaoEnsino
+$('#escolaridade_pessoa-faculdade_id option:eq(' +posInstituicaoEnsino + ')').val()
+
 $('#escolaridade_pessoa-curso').val('Curso teste')
 
 $('#escolaridade_pessoa-data_inicio').val(generateDate(2000, 2005))
