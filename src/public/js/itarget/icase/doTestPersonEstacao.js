@@ -79,7 +79,7 @@ $('#pessoa-uf_conselho').val('CE')
 
 (function fillBar()
 {
-    $('head').append($('<style>').html(".fillbar !important {height:'40px';padding:'5px';margin-top:15px;border:2px solid silver;display:flex;flex-direction:'row', justify-content:center} .fillLegend{margin-right:35px}"))
+    $('head').append($('<style>').html(".fillbar{height:40px;padding:5px;margin-top:15px;border:2px solid silver;display:flex;flex-direction:row; align-items: center;justify-content: center;} .fillLegend{margin-right:35px}"))
     $('body').append(
     $('<div>', {'class':'fillbar'}).append(
         $('<span>', {class:'fillLegend'}).text('Clique para preencher o formulário de cadastro'),
