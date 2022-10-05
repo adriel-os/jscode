@@ -1,21 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const authJWT = require('./authJWT.js')
+const controllerPrincipal = require('./controllerPrincipal.js')
+const controllerAbout = require('./controllerAbout.js')
 
 // middleware para checar Auth
 router.use(authJWT)
 
 // define the home page route
-router.get('/', (req, res)=> {
-  if(req.jwt == false)
-  res.sendFile('/view/home.html', {root:__dirname + './../'})
-  else 
-  res.send('View do Painel')
-})
+router.get('/', controllerPrincipal)
 
 // define the about route
-router.get('/about', function(req, res) {
-  res.send('About birds');
-})
+router.get('/about', controllerAbout)
 
 module.exports = router;

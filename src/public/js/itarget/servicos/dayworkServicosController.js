@@ -35,6 +35,6 @@ function boot(){
         window.scrollTo(0, 0);
         return true
     }
-    console.log('Panel resource not found...')
+   // console.log('Panel resource not found...')
     //j('#VGL').hide().after().hide()
 }

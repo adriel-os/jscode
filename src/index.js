@@ -17,7 +17,7 @@ app.all('/*', function(req, res, next) {
   
 //setting middleware
 app.use('/static', express.static(__dirname + '/public')); //Serves resources from public folder
-
+app.use('/icase', express.static(__dirname + '/public/js/itarget/icase')); //Serves resources from public folder
 
 app.use('/', routes);
 
