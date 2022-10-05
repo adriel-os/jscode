@@ -6,7 +6,7 @@ function generateDate(minRange=1000, maxRange = 2050)
     //mês
     let mes = Math.floor(Math.random() * 10)
     mes = mes > 12 ? 12 : mes
-    mes = mes == 0 ? 1 : ('00'+dia).slice(-2)
+    mes = mes == 0 ? ('001').slice(-2) : ('00'+mes).slice(-2)
     
     //ano
     const anoLength = 10000
