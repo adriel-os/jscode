@@ -30,10 +30,10 @@ console.log('fillForm Ready')
 function fillFormEstacao()
 {
 
-//aba 01
-if($('#pessoa-cpf').val().trim() == '')
+//Dados Pessoais
+if($("input[id='pessoa-cpf']").val().trim() == '')
 {
-    $('#pessoa-cpf').val(gerarCPF())
+    $("input[id='pessoa-cpf']").val(gerarCPF())
 }
 
 let refIdTeste = Math.floor(Math.random() * 100)
