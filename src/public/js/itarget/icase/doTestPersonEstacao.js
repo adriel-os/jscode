@@ -31,6 +31,11 @@ function fillFormEstacao()
 {
 
 //aba 01
+if($('#pessoa-cpf').val().trim() == '')
+{
+    $('#pessoa-cpf').val(gerarCPF())
+}
+
 let refIdTeste = Math.floor(Math.random() * 100)
 $("#pessoa-nome").val().trim() == ''? $("#pessoa-nome").val('Usuário teste itarget'+ refIdTeste):''
 let nome = $("#pessoa-nome").val()
