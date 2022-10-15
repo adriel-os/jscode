@@ -107,7 +107,9 @@ $('#pessoa-uf_conselho').val('CE')
     $('body').append(
     $('<div>', {'class':'fillbar'}).append(
         $('<span>', {class:'fillLegend'}).text('Clique para preencher o formulário de cadastro'),
-        $('<input>', {type:'checkbox', id:'paisBrasil', value:'true', class:''}).click(),
+        $('<input>', {type:'checkbox', id:'paisBrasil'}).append(
+            $('<span>',{text:'Brasileiro:'}),    
+            $('<input>', {type:'checkbox', id:'paisBrasil', class:''}).click()),
         $('<input>', {type:'button', value:'Preencher!', class:'fillButton'}).click(function(){
             fillFormEstacao()
         })
