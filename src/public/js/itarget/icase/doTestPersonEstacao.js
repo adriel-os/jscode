@@ -36,6 +36,11 @@ if($("input[id='pessoa-cpf']").val().trim() == '')
     $("input[id='pessoa-cpf']").val(gerarCPF())
 }
 
+function getRandomInt(min, max) {
+    max ++;
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 let refIdTeste = Math.floor(Math.random() * 100)
 $("#pessoa-nome").val().trim() == ''? $("#pessoa-nome").val('Usuário teste itarget'+ refIdTeste):''
 let nome = $("#pessoa-nome").val()
@@ -47,10 +52,20 @@ $('#pessoa-conselho_orgao_emissor_id').val('7')
 $('#pessoa-email').val('testeitarget'+refIdTeste+'@itarget.com.br')
 $('#pessoa-rg, #Passaport').val(Math.floor(Math.random() * 10000000000))
 $('#pessoa-sexo').val('N')
-$('#pessoa-pais_id').val('12')
+
+if($('#paisBrasil'))
+{
+    $('#pessoa-pais_id').val('12')
+}
+else
+{
+    $("#pessoa-pais_id").val($("#pessoa-pais_id option").eq(getRandomInt(1,$("#pessoa-pais_id option").length)).val())
+}
+
 $('#pessoa-website').val('https://website'+refIdTeste+'.itarget.com.br')
 $('#pessoa-linkedin').val('https://linkedn.'+refIdTeste+'.itarget.com.br')
 $('#pessoa-instagram').val('https://instagram.'+refIdTeste+'.itarget.com.br')
+$('#pessoa-pronome_tratamento_lista').val()
 
 //Endereços
 $('#endereco-tipo_0').val('R')
@@ -92,6 +107,7 @@ $('#pessoa-uf_conselho').val('CE')
     $('body').append(
     $('<div>', {'class':'fillbar'}).append(
         $('<span>', {class:'fillLegend'}).text('Clique para preencher o formulário de cadastro'),
+        $('<input>', {type:'checkbox', id:'paisBrasil', value:'true', class:''}).click(),
         $('<input>', {type:'button', value:'Preencher!', class:'fillButton'}).click(function(){
             fillFormEstacao()
         })
